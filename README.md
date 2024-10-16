@@ -5,34 +5,32 @@ Este es el BFF para un challenge de Fudo el cual ofrece las pegadas a la api de 
 
 ## Instalación
 
-
-1. **Clonar el repositorio:**
-
    ```bash
-   git clone https://github.com/nizho/fudo-news-bff.git
+   # Clonar el repositorio en la carpeta definida
+   git clone https://github.com/nizho/fudo-news-bff.git fudo-news-bff
+   # moverse a la carpeta
+   cd fudo-news-bff
+   # generar imagen de docker
+   docker build . --tag fudo-news-bff
    ```
 
-2. **Navegar al directorio del proyecto:**
-
-   ```bash
-   cd nombre-del-repo
+```bash
+   #Para garantizar la correcta creacion de la imagen en el paso anterior, correr este paso por separado
+   # levantar la imagen
+   docker run --publish 3001:3001 fudo-news-bff
    ```
 
-3. **Instalar las dependencias:**
+
+     ## Consideraciones
+
+   Si se desea correr el proyecto sin docker, se debe realizar la instalacion de dependencias y solicitar la configuracion para el archivo .env
 
    ```bash
    npm install
    ```
 
-4. **Configurar las variables de entorno:**
+   Levantar el proyecto con:
 
-- Solicitar el archivo `.env` que contiene las variables privadas necesarias para la aplicación.
-- Asegurar de que el archivo `.env` esté en la raíz del proyecto.
-
-## Uso
-
-Para iniciar la aplicación, ejecutar el siguiente comando:
-
-```bash
-   node index.js
-```
+   ```bash
+   npm start
+   ```
