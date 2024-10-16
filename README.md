@@ -21,7 +21,7 @@ Este es el BFF para un challenge de Fudo el cual ofrece las pegadas a la api de 
    ```
 
 
-     ## Consideraciones
+## Consideraciones
 
    Si se desea correr el proyecto sin docker, se debe realizar la instalacion de dependencias y solicitar la configuracion para el archivo .env
 
